@@ -1,7 +1,13 @@
 header {
     height: 400px;
-    width: 100%; 
+    width: 100%;
+    padding-top: 5.1em;
+    margin-bottom: 5.1em;
+    background-color: orange;
+    background-image: url(/images/black-thread.png);
 }
-header div {
-
+div.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
