@@ -28,6 +28,9 @@ body {
 
  main {
   background-color: #f4f1ec;
+ }
+
+ main.container {
   display: flex;
   align-items: center;
   margin-left: 5em;
