@@ -10,6 +10,8 @@ nav {
     color: #FFFFFF;
     font-family: Bungee;
     padding: 0em 0em 0em 1.5em;
+    float: left;
+    line-height: 4em; 
 }
 
 nav a {
