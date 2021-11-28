@@ -28,6 +28,7 @@ body {
 
  main {
   background-color: #f4f1ec;
+  max-width: 90%;
  }
 
  main.container {
