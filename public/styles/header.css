@@ -1,5 +1,5 @@
 header {
-    height: 400px;
+    /* height: 400px; */    /* Inquired with Ed on Office hours, and suggested commenting this out */
     max-width: 100%;
     padding-top: 5.1em;
     margin-bottom: 5.1em;
@@ -10,4 +10,7 @@ div.center {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+div h2 {
+    margin-top: 0;
 }
