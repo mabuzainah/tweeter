@@ -1,3 +1,8 @@
+/* The commented out code in lines 2-5 are a general  */
+/* * {
+    margin: 0;
+    padding: 0;
+} */
 header {
     /* height: 400px; */    /* Inquired with Ed on Office hours, and suggested commenting this out */
     max-width: 100%;
