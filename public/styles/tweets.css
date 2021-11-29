@@ -32,10 +32,11 @@ article:hover {
 .tweet-icons {
     padding: 30px 2px 2px 2px;
     float: right;
+    color: #4056A1;
 }
 
 .tweet-icons:hover {
-    color: blue;
+    color: goldenrod;
     cursor: pointer;
 }
 
