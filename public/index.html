@@ -25,8 +25,27 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- TimeAgo JS -->
+    <!-- <script src="jquery.min.js" type="text/javascript"></script> -->
+    <!-- <script src="jquery.timeago.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script> -->
+    <!-- <script>
+      const timeAgo = new TimeAgo('en-US');
+      timeAgo.format(Date.now() - 240 * 60 * 60 * 1000);
+      const dateField = document.getElementsByClassName('timeago');
+      dateField[0].innerHTML = timeAgo;
+
+    </script> -->
+    <!-- <script type="text/javascript">
+      jQuery(document).ready(function() {
+        $("time.timeago").timeago();
+      });
+   </script> -->
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- Character Count JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -60,40 +79,60 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output id="tweet-counter" name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <br>
-      <!-- section that will serve as container that contains and adds the Tweets to it.  -->
-        <article class=tweet>
-          <!-- SECTION WHERE THE HEADER OF THE TWEET WILL BE -->
-          <header>
-              <img src= "/images/profile-hex.png" height="10%" width="10%">
-              <p class="user">Rhonda Jacobs</p>
-              <p class="user-handle">@RhondaJacobs</p>
-          </header>
-          <!-- SECTION WHERE THE TWEET CONTENT WILL BE PRESENT, POPULATE -->
-          <div class="tweet-body">
-            <p>If I have seen further it is by standing on the shoulder of giants</p>
+      <article>
+        <header>
+          <img src= "/images/profile-hex.png" height="10%" width="10%">
+          <p class="user">Rhonda Jacobs</p>
+          <p class="user-handle">@RhondaJacobs</p>
+        </header>
+        <div class="tweet-body">
+          <p>If I have seen further it is by standing on the shoulder of giants</p>
+        </div>
+        <footer>
+          <div class="counter-days" >
+            <p class="timeago" datetime="2021-11-18T09:24:17Z">November 18, 2021</p>
           </div>
-          <footer>
-              <p class="counter-days">10 days ago</p>
-
-              <div class="tweet-icons">
-                <i class="fas fa-retweet"></i>
-              </div>
-              <div class="tweet-icons">
-                <i class="fas fa-heart"></i>
-              </div>
-              <div class="tweet-icons">
-                <i class="fas fa-flag"></i>
-              </div>
-          </footer>
-        </article>
-      <section>
-
-      </section>
+          <div class="tweet-icons">
+            <i class="fas fa-retweet"></i>
+          </div>
+          <div class="tweet-icons">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="tweet-icons">
+            <i class="fas fa-flag"></i>
+          </div>
+        </footer>
+      </article>
+      <br>
+      <article>
+        <header>
+          <img src= "/images/profile-hex.png" height="10%" width="10%">
+          <p class="user">Rhonda Jacobs</p>
+          <p class="user-handle">@RhondaJacobs</p>
+        </header>
+        <div class="tweet-body">
+          <p>If I have seen further it is by standing on the shoulder of giants</p>
+        </div>
+        <footer>
+          <div class="counter-days" >
+            <p class="timeago" datetime="2021-11-18T09:24:17Z">November 18, 2021</p>
+          </div>
+          <div class="tweet-icons">
+            <i class="fas fa-retweet"></i>
+          </div>
+          <div class="tweet-icons">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="tweet-icons">
+            <i class="fas fa-flag"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
