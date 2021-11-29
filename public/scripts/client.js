@@ -31,40 +31,77 @@ $(document).ready(function() {
       </section>`;
     return $tweet;
   };
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-      },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
+
+  const renderTweets = function(tweets) {
+    $('#tweets-container').empty();
+    data.forEach( (tweets) => {
+      console.log("Here is my tweet",tweets);
+      $('#tweets-container').prepend(createTweetElement(tweets));
+    })
   };
 
-  const tweetData2 = {
+  // Fake data taken from initial-tweets.json
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227
+  },
+  {
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
+      "handle": "@rd" },
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1638065358738
-  };
+    "created_at": 1461113959088
+  }
+];
 
-  const $tweet = createTweetElement(tweetData);
-  const $tweet2 = createTweetElement(tweetData2);
+renderTweets(data);
 
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // // Test / driver code (temporary). Eventually will get this from the server.
+  // const tweetData = {
+  //   "user": {
+  //     "name": "Newton",
+  //     "avatars": "https://i.imgur.com/73hZDYK.png",
+  //     "handle": "@SirIsaac"
+  //     },
+  //   "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //   "created_at": 1461116232227
+  // };
 
-  console.log($tweet2); // to see what it looks like
-  $('#tweets-container').append($tweet2); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // const tweetData2 = {
+  //   "user": {
+  //     "name": "Descartes",
+  //     "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //     "handle": "@rd"
+  //   },
+  //   "content": {
+  //     "text": "Je pense , donc je suis"
+  //   },
+  //   "created_at": 1638065358738
+  // };
+
+  // const $tweet = createTweetElement(tweetData);
+  // const $tweet2 = createTweetElement(tweetData2);
+
+  // // Test / driver code (temporary)
+  // console.log($tweet); // to see what it looks like
+  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+
+  // console.log($tweet2); // to see what it looks like
+  // $('#tweets-container').append($tweet2); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 
 });
