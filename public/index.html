@@ -34,7 +34,6 @@
       timeAgo.format(Date.now() - 240 * 60 * 60 * 1000);
       const dateField = document.getElementsByClassName('timeago');
       dateField[0].innerHTML = timeAgo;
-
     </script> -->
     <!-- <script type="text/javascript">
       jQuery(document).ready(function() {
@@ -84,55 +83,32 @@
         </form>
       </section>
       <br>
-      <article>
-        <header>
-          <img src= "/images/profile-hex.png" height="10%" width="10%">
-          <p class="user">Rhonda Jacobs</p>
-          <p class="user-handle">@RhondaJacobs</p>
-        </header>
-        <div class="tweet-body">
-          <p>If I have seen further it is by standing on the shoulder of giants</p>
-        </div>
-        <footer>
-          <div class="counter-days" >
-            <p class="timeago" datetime="2021-11-18T09:24:17Z">November 18, 2021</p>
+      <section id="tweets-container">
+        <article class=tweet>
+          <!-- SECTION WHERE THE HEADER OF THE TWEET WILL BE -->
+          <header>
+              <img src= "https://i.imgur.com/73hZDYK.png">
+              <p class="user">Rhonda Jacobs</p>
+              <p class="user-handle">@RhondaJacobs</p>
+          </header>
+          <!-- SECTION WHERE THE TWEET CONTENT WILL BE PRESENT, POPULATE -->
+          <div class="tweet-body">
+            <p>If I have seen further it is by standing on the shoulder of giants</p>
           </div>
-          <div class="tweet-icons">
-            <i class="fas fa-retweet"></i>
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-heart"></i>
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-flag"></i>
-          </div>
-        </footer>
-      </article>
-      <br>
-      <article>
-        <header>
-          <img src= "/images/profile-hex.png" height="10%" width="10%">
-          <p class="user">Rhonda Jacobs</p>
-          <p class="user-handle">@RhondaJacobs</p>
-        </header>
-        <div class="tweet-body">
-          <p>If I have seen further it is by standing on the shoulder of giants</p>
-        </div>
-        <footer>
-          <div class="counter-days" >
-            <p class="timeago" datetime="2021-11-18T09:24:17Z">November 18, 2021</p>
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-retweet"></i>
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-heart"></i>
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-flag"></i>
-          </div>
-        </footer>
-      </article>
+          <footer>
+              <p class="counter-days">10 days ago</p>
+              <div class="tweet-icons">
+                <i class="fas fa-flag"></i>
+              </div>
+              <div class="tweet-icons">
+                <i class="fas fa-retweet"></i>
+              </div>  
+              <div class="tweet-icons">
+                <i class="fas fa-heart"></i>
+              </div>
+          </footer>
+        </article>
+      </section>
     </main>
   </body>
 </html>
