@@ -16,3 +16,14 @@
     font-family: Bungee;
 }
 
+textarea {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #f4f1ec;
+    outline: none;
+    resize: none;
+}
+
+
