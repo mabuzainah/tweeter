@@ -7,12 +7,23 @@ article {
     align-items: center;
     justify-content: center;
 }
-.tweet header {
-    display: flex;
-    flex-direction: row;
-}
 article:hover {
     box-shadow: 10px 5px 5px lightgrey;
+}
+.tweet header {
+    padding-top: 0em;
+    margin-bottom: 0em;
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f1ec;
+    background-image: url(/images/black-thread.png);
+}
+.user{
+    float:left;
+    padding: 0px 100px 20px 20px;
+}
+.user-handle{
+    float: right;
 }
 .counter-days {
     float: left;
@@ -21,6 +32,11 @@ article:hover {
 .tweet-icons {
     padding: 30px 2px 2px 2px;
     float: right;
+}
+
+.tweet-icons:hover {
+    color: blue;
+    cursor: pointer;
 }
 
 /* .tweet-body {
