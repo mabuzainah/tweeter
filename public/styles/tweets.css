@@ -1,4 +1,4 @@
-article {
+#tweets-container {
     border: 2px solid #545149;
     padding: 2px 2px 2px 2px;
     max-width:100%;
@@ -6,18 +6,26 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 15px;
 }
-article:hover {
-    box-shadow: 10px 5px 5px lightgrey;
+
+#tweets-container:hover {
+    box-shadow: 10px 5px 10px lightgrey;
 }
 .tweet header {
+    max-width: 100%;
     padding-top: 0em;
-    margin-bottom: 0em;
+    margin: 0em 0em 0em 0em;
     display: flex;
     flex-direction: row;
     background-color: #f4f1ec;
     background-image: url(/images/black-thread.png);
 }
+.tweet-body {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .user{
     float:left;
     padding: 0px 100px 20px 20px;
@@ -41,7 +49,6 @@ article:hover {
 }
 
 /* .tweet-body {
-
 } */
 
 footer {
@@ -49,4 +56,3 @@ footer {
     float:left;
     padding: 0px 10px;
 }
-
