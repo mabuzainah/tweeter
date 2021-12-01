@@ -43,7 +43,7 @@
       </ul>
        
     </nav>
-
+    <!-- User's Profile details on the page's header - to be displayed under the navbar.  -->
     <header>
       <div class="center">
           <img src="/images/profile-hex.png"> 
@@ -56,22 +56,21 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <!-- <p>Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...
-      </p> -->
+      <!-- Section where user will get to create a new tweet from their end. -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="post">
+        <form id="newTweetForm" action="/tweets/" method="post">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
-            <button class="tweet-button" type="submit">Tweet</button>
+            <button id="new-tweet-submit-button" class="tweet-button" type="submit">Tweet</button>
             <output id="tweet-counter" name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <br>
+      <!-- Section where the tweets will live and populate. -->
       <section id="tweets-container">
-      
       </section>
     </main>
   </body>
