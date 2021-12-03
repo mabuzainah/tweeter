@@ -50,6 +50,8 @@ $(document).ready(function() {
         data: form.serialize(), // serializes form input
         success: function(data){
           console.log(data);
+          //update the page without having to manually reload the page.
+          location.reload();
         }
       })
     }
