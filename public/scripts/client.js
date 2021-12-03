@@ -38,14 +38,22 @@ $(document).ready(function() {
     e.preventDefault(); // prevent actual form submit
     var form = $(this);
     var url = form.attr('action'); //get submit url [replace url here if desired]
-    $.ajax({
-         type: "POST",
-         url: url,
-         data: form.serialize(), // serializes form input
-         success: function(data){
-             console.log(data);
-         }
-    })
+    if(document.getElementById("tweet-text").value.length == 0 ) {
+      alert("Your tweet is currently empty, form cannot be submitted! Please input text")
+    }
+    else if(document.getElementById("tweet-text").value.length >= 140) {
+      alert("Your tweet is too long, please stick to 140 characters MAX!")
+    } else {
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(), // serializes form input
+        success: function(data){
+          console.log(data);
+        }
+      })
+    }
+    
   });
 
 
