@@ -29,6 +29,7 @@
 .tweet-body {
     padding-left: 5px;
     padding-right: 5px;
+    word-wrap: break-word;
 }
 
 .user{
