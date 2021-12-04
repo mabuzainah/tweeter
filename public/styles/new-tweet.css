@@ -26,7 +26,8 @@ textarea {
     resize: none;
 }
 
-.tweet-error {
+#emptyError , #tooLongError {
+    display: none;
     color: red;
     padding-bottom: 20px;
 }
