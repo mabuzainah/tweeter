@@ -29,5 +29,10 @@ textarea {
 #emptyError , #tooLongError {
     display: none;
     color: red;
-    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: crimson;
+    border-style: dotted;
+    border-width: 2px;
+    background: lightcoral;
 }
