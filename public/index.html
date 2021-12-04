@@ -32,6 +32,7 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <!-- Character Count JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -59,6 +60,16 @@
       <!-- Section where user will get to create a new tweet from their end. -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div id="emptyError">
+          <p>
+            Your tweet is currently empty, form cannot be submitted! Please input text below.
+          </p>
+        </div>
+        <div id="tooLongError">
+          <p>
+            Your tweet is too long, please stick to 140 characters MAX!
+          </p>
+        </div>
         <form id="newTweetForm" action="/tweets/" method="post">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
