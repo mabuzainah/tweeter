@@ -15,7 +15,7 @@ $(document).ready(function() {
           <p class="user-handle">${tweet.user.handle}</p>
         </header>
         <div class="tweet-body">
-          <p>${tweet.content.text}</p>
+          <p> ${escape(tweet.content.text)}</p>
         </div>
         <footer>
           <p class="counter-days">${timeago.format(tweet.created_at)}</p>
@@ -32,6 +32,13 @@ $(document).ready(function() {
       </article>
       </section>`;
     return $tweet;
+  };
+
+  //create function to prevent cross site scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   // Submitting the form using jQuery and Ajax 
@@ -52,7 +59,7 @@ $(document).ready(function() {
       $.ajax({
         type: "POST",
         url: url,
-        data: form.serialize().toString(),
+        data: form.serialize(),
         // data: "text=test", // serializes form input
         success: function(data){
           console.log(data);
