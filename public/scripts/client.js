@@ -5,6 +5,7 @@
  */
 $(document).ready(function() {
   //function to allow creation of tweetElement
+
   const createTweetElement = function(tweet) {
     let $tweet = `<section id="tweets-container">
       <article class="tweet">
@@ -36,22 +37,27 @@ $(document).ready(function() {
   // Submitting the form using jQuery and Ajax 
   $("#newTweetForm").submit(function(e) {
     e.preventDefault(); // prevent actual form submit
-    var form = $(this);
-    var url = form.attr('action'); //get submit url [replace url here if desired]
-    if(document.getElementById("tweet-text").value.length == 0 ) {
-      alert("Your tweet is currently empty, form cannot be submitted! Please input text")
+    const form = $(this)
+    const url = form.attr('action'); //get submit url [replace url here if desired]  
+    
+    if (document.getElementById("tweet-text").value.length == 0 ) {
+      $('#tooLongError').slideUp();
+      $('#emptyError').slideDown();
     }
-    else if(document.getElementById("tweet-text").value.length >= 140) {
-      alert("Your tweet is too long, please stick to 140 characters MAX!")
+    else if (document.getElementById("tweet-text").value.length >= 140) {
+      $('#emptyError').slideUp();
+      $('#tooLongError').slideDown();
+      
     } else {
       $.ajax({
         type: "POST",
         url: url,
-        data: form.serialize(), // serializes form input
+        data: form.serialize().toString(),
+        // data: "text=test", // serializes form input
         success: function(data){
           console.log(data);
           //update the page without having to manually reload the page.
-          location.reload();
+          loadTweets();
         }
       })
     }
@@ -64,7 +70,7 @@ $(document).ready(function() {
     $('#tweets-container').empty();
     for (let i = 0; i < tweets.length; i++) {
       console.log("Here is my tweet",tweets);
-      $("#tweets-container").append(createTweetElement(tweets[i]));
+      $("#tweets-container").prepend(createTweetElement(tweets[i]));
     }
   };
 
