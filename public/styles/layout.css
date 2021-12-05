@@ -3,7 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+ html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -40,3 +40,39 @@ body {
   justify-content: center;
   flex-direction: column;
  }
+ @media screen and (max-width: 767px) {
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /*
+   * Global layout stuff
+   */
+  
+  body {
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family:Source Sans Pro;
+    
+  }
+  
+  main {
+    background-color: #f4f1ec;
+    max-width: 90%;
+    float: right;
+  }
+  
+  main.container {
+    display: flex;
+    align-items: center;
+    margin-top: -5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
