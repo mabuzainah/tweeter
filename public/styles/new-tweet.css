@@ -36,3 +36,7 @@ textarea {
     border-width: 2px;
     background: lightcoral;
 }
+
+#new-tweet {
+    display: none;
+}

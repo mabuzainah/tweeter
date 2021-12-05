@@ -40,7 +40,7 @@
     <nav>
       <span class="logo">tweeter</span>
       <ul>
-        <a><b>Write</b> a new tweet<i class="fas fa-angle-double-down"></i></a> 
+        <div class="arrowDown"><a><b>Write</b> a new tweet<i class="fas fa-angle-double-down"></i></a></div> 
       </ul>
        
     </nav>
@@ -58,7 +58,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!-- Section where user will get to create a new tweet from their end. -->
-      <section class="new-tweet">
+      <section id="new-tweet" class="new-tweet">
         <h2>Compose Tweet</h2>
         <div id="emptyError">
           <p>
@@ -72,7 +72,7 @@
         </div>
         <form id="newTweetForm" action="/tweets/" method="post">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" autofocus></textarea>
           <div>
             <button id="new-tweet-submit-button" class="tweet-button" type="submit">Tweet</button>
             <output id="tweet-counter" name="counter" class="counter" for="tweet-text">140</output>

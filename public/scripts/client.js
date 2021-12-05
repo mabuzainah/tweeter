@@ -41,6 +41,18 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
+  //clicking on the element <i> in nav bar to toggle Tweet Box
+  $(".arrowDown a").click(function(){
+    var toggleTweet = document.getElementById("new-tweet");
+    if (toggleTweet.style.display === "none") {
+      toggleTweet.style.display = "block";
+      $('#new-tweet').slideDown();
+    } else {
+      toggleTweet.style.display = "none";
+      $('#new-tweet').slideUp();
+    }
+  });
+
   // Submitting the form using jQuery and Ajax 
   $("#newTweetForm").submit(function(e) {
     e.preventDefault(); // prevent actual form submit
@@ -65,6 +77,8 @@ $(document).ready(function() {
           console.log(data);
           //update the page without having to manually reload the page.
           loadTweets();
+          //clearing the textarea after submission of form and loading of tweets
+          location.reload();
         }
       })
     }
