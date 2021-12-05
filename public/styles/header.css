@@ -13,9 +13,30 @@ header {
 }
 div.center {
     display: flex;
+    padding-top: 2em;
     align-items: center;
     justify-content: center;
 }
 div h2 {
     margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        /* height: 400px; */    /* Inquired with Ed on Office hours, and suggested commenting this out */
+        max-width: 100%;
+        padding-top: 5.1em;
+        margin-bottom: 5.1em;
+        background-color: orange;
+        background-image: none;
+    }
+    div.center {
+        display: flex;
+        padding-top: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+    div h2 {
+        margin-top: 0;
+    }
 }
