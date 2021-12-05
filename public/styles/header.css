@@ -8,6 +8,7 @@ header {
     max-width: 100%;
     padding-top: 5.1em;
     margin-bottom: 5.1em;
+    margin-right: 0%;
     background-color: orange;
     background-image: url(/images/black-thread.png);
 }
@@ -19,6 +20,65 @@ div.center {
 }
 div h2 {
     margin-top: 0;
+}
+
+@media screen and (min-width: 992px) {
+    #desktopOnly {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+    }
+
+    header {
+        /* height: 400px; */    /* Inquired with Ed on Office hours, and suggested commenting this out */
+        max-width: 50%;
+        padding-top: 5.1em;
+        margin-bottom: 5.1em;
+        margin-right: 0%;
+        margin-top: 7.5em;
+        background-color: orange;
+        background-image: url(/images/black-thread.png);
+        float: left;
+    }
+
+    main {
+        max-width: 50%;
+        float: right;
+        padding-top: 10em;
+        align-self: flex-end;
+    }
+}
+
+/* Added code for the in-between phase transition from Desktop to Mobile.  */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    header {
+        /* height: 400px; */    /* Inquired with Ed on Office hours, and suggested commenting this out */
+        max-width: 100%;
+        padding-top: 5.1em;
+        margin-bottom: 5.1em;
+        background-color: orange;
+        background-image: none;
+    }
+    div.center {
+        display: flex;
+        padding-top: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+    div h2 {
+        margin-top: 0;
+    }
+
+    nav {
+        width: 100%;
+        height: 120px;
+        background-color: orange;
+        z-index: 5;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
