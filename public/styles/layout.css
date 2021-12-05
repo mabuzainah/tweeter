@@ -31,6 +31,7 @@ body {
   max-width: 90%;
  }
 
+
  main.container {
   display: flex;
   align-items: center;
@@ -40,6 +41,9 @@ body {
   justify-content: center;
   flex-direction: column;
  }
+
+
+
  @media screen and (max-width: 767px) {
   html {
     box-sizing: border-box;
